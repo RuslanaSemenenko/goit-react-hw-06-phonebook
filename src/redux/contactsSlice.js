@@ -10,7 +10,7 @@ const contactsSlice = createSlice({
       reducer(state, action) {
         state.value.push(action.payload);
       },
-      prepare(name, number) {
+      prepare({ name, number }) {
         return {
           payload: {
             name,
