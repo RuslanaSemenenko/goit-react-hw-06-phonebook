@@ -21,7 +21,7 @@ const Filter = () => {
         className={styles.Filter_input}
         type="text"
         autoComplete="off"
-        value={value}
+        value={filter}
         onChange={handleChange}
         name="name"
       />

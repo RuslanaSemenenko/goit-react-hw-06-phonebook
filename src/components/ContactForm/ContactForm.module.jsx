@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const TaskEditor = styled.div`
+export const TaskEditor = styled.form`
   display: flex;
   flex-direction: column;
   padding: 12px;
