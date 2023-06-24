@@ -1,4 +1,4 @@
-import React, { dispatch, deleteContact } from 'react';
+import  { dispatch, deleteContact } from 'react';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import ContactForm from './ContactForm/ContactForm';
@@ -6,7 +6,6 @@ import ContactForm from './ContactForm/ContactForm';
 export default function App() {
   const onRemoveContact = contactId => {
     dispatch(deleteContact(contactId));
-    // тут додасиш свій код для видалення
   };
 
   return (
