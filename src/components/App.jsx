@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { dispatch, deleteContact } from 'react';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import ContactForm from './ContactForm/ContactForm';
 
 export default function App() {
-  const [filter, setFilter] = useState('');
-
-  const changeFilter = filter => {
-    setFilter(filter);
+  const onRemoveContact = contactId => {
+    dispatch(deleteContact(contactId));
+    // тут додасиш свій код для видалення
   };
 
   return (
@@ -16,8 +15,8 @@ export default function App() {
 
       <ContactForm />
       <h2>Contacts</h2>
-      <Filter value={filter} onChangeFilter={changeFilter} />
-      <ContactList filter={filter} />
+      <Filter />
+      <ContactList onRemoveContact={onRemoveContact} />
     </div>
   );
 }
