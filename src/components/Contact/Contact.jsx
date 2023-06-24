@@ -15,9 +15,9 @@ export const Contact = ({ contact }) => {
       <span>
         {contact.name}: <span className="List_span">{contact.number}</span>
       </span>
-      <button className="List_button" onClick={handleDelete}>
+      {/* <button className="List_button" onClick={handleDelete}>
         delete
-      </button>
+      </button> */}
     </div>
   );
 };

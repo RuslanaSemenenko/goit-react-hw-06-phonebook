@@ -1,9 +1,13 @@
-import  { dispatch, deleteContact } from 'react';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { deleteContact } from '../redux/contactsSlice';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 import ContactForm from './ContactForm/ContactForm';
 
 export default function App() {
+  const dispatch = useDispatch();
+
   const onRemoveContact = contactId => {
     dispatch(deleteContact(contactId));
   };
